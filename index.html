@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0xTanvexar</title>
+
+    <!-- 🔥 CSS -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- 🔥 Favicon -->
+    <link rel="icon" href="assets/logo.gif">
+</head>
+
+<body>
+
+    <!-- 🔥 BOOT SCREEN -->
+<div id="boot-screen">
+    <div id="boot-text"></div>
+    <div id="audio-hint">
+    CLICK ANYWHERE TO START SYSTEM AUDIO
+</div>
+</div>
+
+    <!-- 🔥 MATRIX BACKGROUND -->
+    <canvas id="matrix"></canvas>
+
+    <!-- 🔥 DARK OVERLAY -->
+    <div class="overlay"></div>
+
+    <!-- ================= NAVBAR ================= -->
+    <header class="navbar">
+
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="assets/logo.gif" alt="Tanvexar Logo">
+            <span>Tanvexar</span>
+        </div>
+
+        <!-- HAMBURGER MENU -->
+        <div class="menu-icon" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+    </header>
+
+    <!-- ================= MENU ================= -->
+    <nav class="menu" id="menu">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#cv">CV</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+    <!-- ================= MAIN ================= -->
+    <main>
+
+        <!-- ================= HERO ================= -->
+        <section class="hero" id="home">
+
+            <!-- MAIN LOGO -->
+            <img src="assets/logo.gif" class="hero-logo" alt="Main Logo">
+
+            <!-- TITLE -->
+            <h1>0xTANVEXAR</h1>
+
+            <!-- TERMINAL STYLE GREETING -->
+            <p id="typing"></p>
+
+            <!-- BANNER -->
+            <img src="assets/banner.png" class="banner" alt="Banner">
+
+        </section>
+
+        <!-- LIVE CLOCK -->
+         <div class="live-clock" id="liveClock"></div>
+
+        <!-- ================= TERMINAL ================= -->
+        <!-- Fake hacking logs yaha show honge -->
+        <section class="terminal">
+
+            <!-- JS yaha dynamic logs add karega -->
+            <div id="terminal-output"></div>
+
+            <!-- ================= TERMINAL INPUT SYSTEM ================= -->
+
+<!-- user command input line -->
+<div class="terminal-input-line">
+    
+    <!-- terminal prompt (static text) -->
+    <span class="prompt">root@tanvexar:~$</span>
+    
+    <!-- user input field (commands type karne ke liye) -->
+    <input type="text" id="terminal-input" autocomplete="off">
+
+</div>
+
+        </section>
+
+        <!-- ================= RECON PANEL ================= -->
+        <section class="recon-panel">
+            <h2>Visitor Recon</h2>
+
+            <div class="recon-grid">
+
+                <div class="recon-box">
+                    <span>IP Address:</span>
+                    <p id="ip">Scanning...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Browser:</span>
+                    <p id="browser">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>OS:</span>
+                    <p id="os">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Device:</span>
+                    <p id="device">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Resolution:</span>
+                    <p id="resolution">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Battery:</span>
+                    <p id="battery">Checking...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>RAM:</span>
+                    <p id="ram">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Time Zone:</span>
+                    <p id="timezone">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Touch Support:</span>
+                    <p id="touch">Detecting...</p>
+                </div>
+
+                <div class="recon-box">
+                    <span>Connection:</span>
+                    <p id="connection">Detecting...</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= TIME ================= -->
+        <section class="time-section">
+            <div id="time"></div>
+        </section>
+
+        <!-- PROJECT SLIDER 
+         <div class="projects-slider">
+            <div id="projects-container" class="projects-container">
+    </div>
+
+</div><section id="projects">
+--->
+
+<!-- ABOUT SECTION START -->
+<section id="about" class="about-section">
+
+  <h2 class="about-title">ABOUT ME</h2>
+
+  <div class="about-box">
+
+    <div class="about-header">
+      [PROFILE LOADED]
+    </div>
+
+    <div class="about-content">
+
+      <p><span class="label">Tanvexar</span> VAPT Learner | Security Researcher | Red Team Aspirant</p>
+
+      <p>Cybersecurity enthusiast focused on Web Application Security and Vulnerability Assessment.</p>
+
+      <p>Hands-on experience in identifying and testing vulnerabilities such as XSS and SQL Injection on real-world web applications as part of ethical VAPT practice.</p>
+
+      <p><span class="label">Mindset:</span> Security is about understanding systems deeply enough to think like an attacker and defend like an engineer.</p>
+
+      <p><span class="label">Goal:</span> To grow into a professional penetration tester / red team operator.</p>
+
+      <p><span class="label">Status:</span> Learning. Building. Breaking. Fixing. Repeating.</p>
+
+    </div>
+
+  </div>
+
+</section>
+<!-- ABOUT SECTION END -->
+
+
+<!-- ================= PROGRAMMING LANGUAGES ================= -->
+
+<h3 class="skills-title">// PROGRAMMING LANGUAGES</h3>
+
+<div class="skills-box">
+
+    <div class="skills-circle-grid">
+
+        <!-- HTML -->
+        <div class="circle-skill" data-percent="70">
+
+            <svg class="skill-svg" viewBox="0 0 140 140">
+
+                <circle
+                    class="skill-bg"
+                    cx="70"
+                    cy="70"
+                    r="55">
+                </circle>
+
+                <circle
+                    class="skill-progress"
+                    cx="70"
+                    cy="70"
+                    r="55"
+                    style="
+        stroke-dasharray: 345.5;
+        stroke-dashoffset: 345.5;
+        ">
+                </circle>
+
+            </svg>
+
+            <div class="skill-text">
+                <span>HTML</span>
+                <b>70%</b>
+            </div>
+
+        </div>
+
+        <!-- CSS -->
+        <div class="circle-skill" data-percent="60">
+
+            <svg class="skill-svg" viewBox="0 0 140 140">
+
+                <circle
+                    class="skill-bg"
+                    cx="70"
+                    cy="70"
+                    r="55">
+                </circle>
+
+                <circle
+                    class="skill-progress"
+                    cx="70"
+                    cy="70"
+                    r="55"
+                    style="
+        stroke-dasharray: 345.5;
+        stroke-dashoffset: 345.5;
+        ">
+        </circle>
+
+            </svg>
+
+            <div class="skill-text">
+                <span>CSS</span>
+                <b>60%</b>
+            </div>
+
+        </div>
+
+        <!-- JS -->
+        <div class="circle-skill" data-percent="50">
+
+            <svg class="skill-svg" viewBox="0 0 140 140">
+
+                <circle
+                    class="skill-bg"
+                    cx="70"
+                    cy="70"
+                    r="55">
+                </circle>
+
+                <circle
+                    class="skill-progress"
+                    cx="70"
+                    cy="70"
+                    r="55"
+                    style="
+        stroke-dasharray: 345.5;
+        stroke-dashoffset: 345.5;
+        ">
+        </circle>
+
+            </svg>
+
+            <div class="skill-text">
+                <span>JS</span>
+                <b>50%</b>
+            </div>
+
+        </div>
+
+        <!-- PYTHON -->
+        <div class="circle-skill" data-percent="80">
+
+            <svg class="skill-svg" viewBox="0 0 140 140">
+
+                <circle
+                    class="skill-bg"
+                    cx="70"
+                    cy="70"
+                    r="55">
+                </circle>
+
+                <circle
+                    class="skill-progress"
+                    cx="70"
+                    cy="70"
+                    r="55"
+                    style="
+        stroke-dasharray: 345.5;
+        stroke-dashoffset: 345.5;
+        ">
+        </circle>
+
+            </svg>
+
+            <div class="skill-text">
+                <span>PY</span>
+                <b>80%</b>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- TITLE OUTSIDE BOX -->
+<h3 class="skills-title">// OPERATOR SKILLS</h3>
+
+<!-- BOX ONLY FOR SKILLS -->
+<div class="skills-box">
+
+    <div class="skills-grid">
+
+        <div class="skill-node"><span>LINUX</span></div>
+        <div class="skill-node"><span>NETWORKING</span></div>
+
+        <div class="skill-node"><span>NMAP</span></div>
+        <div class="skill-node"><span>BURP SUITE</span></div>
+
+        <div class="skill-node"><span>RECON</span></div>
+        <div class="skill-node"><span>VAPT</span></div>
+
+        <div class="skill-node"><span>AD BASICS</span></div>
+        <div class="skill-node"><span>PRIVESC</span></div>
+
+    </div>
+
+</div>
+
+
+<!-- ================= PROJECT-X ================= -->
+
+<section class="projects-section" id="projects">
+
+    <h2 class="project-title">
+        [ PROJECT-X ]
+    </h2>
+
+    <div class="projects-slider">
+
+        <div class="projects-container" id="projects-container">
+
+            <!-- PROJECT 1 -->
+            <div class="project-card">
+
+                <h3>Tanvexar</h3>
+
+                <p>
+                    VAPT | Security Researcher | Red Team Aspirant 
+                </p>
+
+                <a href="#">
+                    ACCESS REPO
+                </a>
+
+            </div>
+
+            <!-- PROJECT 2 -->
+            <div class="project-card">
+
+                <h3>From-Shell-to-Root</h3>
+
+                <p>
+                    Practical offensive security playbook covering reverse shells,
+                    Linux privilege escalation and pentesting techniques.
+                </p>
+
+                <a href="#">
+                    ACCESS REPO
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTROLS -->
+     
+    
+    <div class="project-controls">
+
+
+        <button class="project-btn" id="prevProject">
+            &lt;
+        </button>
+
+        <div class="project-dots" id="project-dots">
+
+            <span class="project-dot active"></span>
+            <span class="project-dot"></span>
+
+        </div>
+
+        
+
+        <button class="project-btn" id="nextProject">
+            &gt;
+        </button>
+
+    </div>
+
+</section>
+
+    </main>
+
+    <!-- ================= FOOTER ==
+    <footer style="text-align:center; padding:20px; font-size:14px;">
+        © 2026 Tanvexar | Red Team Portfolio
+    </footer>      =============== -->
+
+    <!-- 🔥 ACCESS SCREEN -->
+    <div id="access-screen" class="access-screen">
+        ACCESS GRANTED
+    </div>
+
+    <!-- 🔥 GLITCH FLASH -->
+    <div id="glitch" class="glitch-flash"></div>
+
+    <!-- 🔊 TYPING SOUND -->
+    <audio id="typeSound" src="assets/typing.mp3"></audio>
+
+    <!-- 🔊 WELCOME SOUND -->
+    <audio id="welcomeSound" src="assets/welcome.mp3"></audio>
+
+           
+
+        
+        <!-- ================= SNAKE GAME ================= -->
+
+<div id="snake-container" class="snake-container">
+
+    <div class="snake-box">
+
+       <div class="snake-header">
+
+    <div class="snake-info">
+
+        <div class="snake-brand">
+            [ 0xTanvexar.exe ]
+        </div>
+
+        <div class="snake-status">
+            SYSTEM ACTIVE • SNAKE MODULE LOADED
+        </div>
+
+    </div>
+
+    <div id="snake-score" class="snake-score">
+        SCORE: 0
+    </div>
+
+    <button id="closeSnake">✖</button>
+
+</div>
+
+        <canvas id="snakeGame" width="400" height="400"></canvas>
+
+    </div>
+
+</div>
+
+        <!-- ================= RECON PANEL ================= -->
+      
+
+        <!-- cv download-->
+          <section id="cv" class="cv-section"> 
+            
+            <a href="assets/Tanvexar_Resume.pdf" download class="cv-btn">
+                 ⬇ DOWNLOAD CV
+                 </a>
+                </section>
+
+                
+        <!----- contact ----->
+       <section id="contact" class="contact-section">
+
+    <h2 class="skills-title">CONTACT</h2>
+
+    <div class="social-icons">
+        <a href="https://github.com/Tanvexar" target="_blank" class="icon github">GitHub</a>
+        <a href="https://in.linkedin.com/in/chanaliya" target="_blank" class="icon linkedin">LinkedIn</a>
+        <a href="https://profile.hackthebox.com/profile/019e2cad-0b73-7373-a11a-512561d28035" target="_blank" class="icon htb">HTB</a>
+        <a href="https://tryhackme.com/p/0xTanvexar" target="_blank" class="icon thm">THM</a>
+        <a href="https://medium.com/@Tanvexar" target="_blank" class="icon medium">Medium</a>
+        <a href="https://x.com/0xTanvexar" target="_blank" class="icon X">X</a>
+
+        
+    </div>
+
+</section>
+
+<!-- ================= INITIATE CONTACT ================= -->
+
+<section class="contact-section" id="contact">
+
+    <h2 class="contact-title">
+        // INITIATE CONTACT
+    </h2>
+
+    <div class="contact-box">
+
+        <form id="secureContactForm" novalidate>
+
+            <!-- NAME -->
+
+            <div class="input-group">
+
+                <label>IDENTITY</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    maxlength="30"
+                    autocomplete="off"
+                    placeholder="ENTER CODENAME"
+                    required
+                >
+
+                <small class="error-text" id="nameError"></small>
+
+            </div>
+
+            <!-- EMAIL -->
+
+            <div class="input-group">
+
+                <label>SECURE CHANNEL</label>
+
+                <input
+                    type="email"
+                    id="email"
+                    maxlength="60"
+                    autocomplete="off"
+                    placeholder="ENTER VALID EMAIL"
+                    required
+                >
+
+                <small class="error-text" id="emailError"></small>
+
+            </div>
+
+            <!-- MESSAGE -->
+
+            <div class="input-group">
+
+                <label>PAYLOAD</label>
+
+                <textarea
+                    id="message"
+                    rows="6"
+                    maxlength="600"
+                    placeholder="TRANSMIT MESSAGE..."
+                    required
+                ></textarea>
+
+                <small class="error-text" id="messageError"></small>
+
+            </div>
+
+            <!-- BUTTON -->
+<button
+    type="submit"
+    class="transmit-btn"
+    id="payloadBtn"
+>
+
+    <span class="shatter-text payload-text">
+        TRANSMIT PAYLOAD
+    </span>
+
+</button>
+
+        </form>
+
+    </div>
+
+</section>
+
+<div class="footer-sign" id="footerSign">
+    <div id="footerText"></div>
+</div>
+
+
+    <!-- 🔥 JS (always last) -->
+    <script src="js/script.js"></script>
+
+    <!-- ================= FOOTER ================= -->
+    <footer style="text-align:center; padding:20px; font-size:14px;">
+        © 2026 Tanvexar | Red Team Portfolio
+    </footer>
+
+</body>
+</html>
+
