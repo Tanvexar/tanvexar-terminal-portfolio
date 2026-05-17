@@ -48,12 +48,6 @@ It allows users to interact through terminal commands, view system data, and exp
 
 ---
 
-## 📸 Preview
-
-> Add screenshots or GIFs here
-
----
-
 ## 📂 Run Locally
 
 ```bash
