@@ -1536,3 +1536,26 @@ a, button {
 #footerText span{
     text-shadow: 0 0 6px currentColor;
 }
+
+/* footer  */ 
+footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    color: #00ff88;
+    font-family: monospace;
+    position: relative;
+}
+
+footer::after {
+    content: " :: SECURED";
+    color: red;
+    margin-left: 5px;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
