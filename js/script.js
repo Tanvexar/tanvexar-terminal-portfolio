@@ -1574,6 +1574,29 @@ form.addEventListener("submit", async function(e){
     if(!checkForm()) return;
 
     await showTransmitState();
+    try {
+
+        const res = await fetch("https://restless-field-d668.tanvexar.workers.dev/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                name: nameInput.value,
+                email: emailInput.value,
+                message: messageInput.value
+            })
+        });
+
+        const data = await res.text();
+
+        console.log("Email sent:", data);
+
+    } catch (err) {
+
+        console.log("Send failed:", err);
+        printOutput("[ ERROR ] Message failed to send");
+    }
 
     // RESET AFTER TRANSMISSION
     form.reset();
