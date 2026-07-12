@@ -48,6 +48,12 @@ It allows users to interact through terminal commands, view system data, and exp
 
 ---
 
+## 🌐 Check live website
+
+https://0xtanvexar.pages.dev/
+
+---
+
 ## 📂 Run Locally
 
 ```bash
